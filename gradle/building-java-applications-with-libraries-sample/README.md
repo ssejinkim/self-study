@@ -1,5 +1,5 @@
 # Building Java Applications with Libraries Sample
-link: https://docs.gradle.org/current/samples/sample_building_java_libraries.html
+link: https://docs.gradle.org/current/samples/sample_building_java_applications_multi_project.html
 
 ## Summary
 - Initialize a project that produces a Java application
