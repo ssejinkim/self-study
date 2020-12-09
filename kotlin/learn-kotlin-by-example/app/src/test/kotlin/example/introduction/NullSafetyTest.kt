@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 class NullSafetyTest {
 
     @Test
-    internal fun `Null Safety`() {
+    fun `Null Safety`() {
         var neverNull: String = "This can't be null"
 
 //        neverNull = null //Null can not be a value of a non-null type String
@@ -37,7 +37,7 @@ class NullSafetyTest {
     }
 
     @Test
-    internal fun `Working with Nulls`() {
+    fun `Working with Nulls`() {
         fun describeString(maybeString: String?): String =
                 if (maybeString != null && maybeString.isNotEmpty())
                     "String of length ${maybeString.length}"

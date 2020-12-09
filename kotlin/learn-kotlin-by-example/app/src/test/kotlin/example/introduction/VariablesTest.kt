@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 class VariablesTest {
 
     @Test
-    internal fun `variables`() {
+    fun `variables`() {
 
         var a: String = "initial"
         then(a is String).isTrue()
