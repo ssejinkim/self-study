@@ -12,6 +12,7 @@ link: https://docs.gradle.org/current/samples/sample_building_java_applications_
 ```
 $ gradle init
 $ ./gradlew check 
+$ ./gradlew projects
 $ ./gradlew run 
 $ ./gradlew build 
 $ ./gradlew build --sacn
