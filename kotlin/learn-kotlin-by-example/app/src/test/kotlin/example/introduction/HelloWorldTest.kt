@@ -14,7 +14,8 @@ class App {
 }
 
 class HelloWorldTest {
-    @Test fun testAppHasAGreeting() {
+    @Test
+    internal fun testAppHasAGreeting() {
         assertNotNull(App().greeting, "app should have a greeting")
     }
 }

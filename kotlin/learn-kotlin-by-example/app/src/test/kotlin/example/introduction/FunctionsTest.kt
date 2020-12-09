@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 class FunctionsTest {
 
     @Test
-    fun `Default Parameter Values and Named Arguments`() {
+    internal fun `Default Parameter Values and Named Arguments`() {
         var argument = ""
 
         fun printMessage(message: String): Unit {
@@ -47,7 +47,7 @@ class FunctionsTest {
     }
 
     @Test
-    fun `Infix Functions`() {
+    internal fun `Infix Functions`() {
 
         //local function
         infix fun Int.times(str: String) = str.repeat(this)
@@ -90,7 +90,7 @@ class FunctionsTest {
     }
 
     @Test
-    fun `Operator Functions`() {
+    internal fun `Operator Functions`() {
         operator fun Int.times(str: String) = str.repeat(this)
         println(2 * "Bye ")
         then(2 * "Bye ")
@@ -105,7 +105,7 @@ class FunctionsTest {
     }
 
     @Test
-    fun `Functions with vararg Parameters`() {
+    internal fun `Functions with vararg Parameters`() {
         var arguments = mutableListOf<String>()
 
         //vararg
