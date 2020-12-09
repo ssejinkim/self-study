@@ -1,7 +1,7 @@
 package example.introduction
 
 import org.assertj.core.api.BDDAssertions.then
-import org.junit.Test
+import org.junit.jupiter.api.Test
 
 
 class FunctionsTest {
