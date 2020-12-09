@@ -1,1 +1,4 @@
 # self-study
+
+## Gradle
+## Kotlin
