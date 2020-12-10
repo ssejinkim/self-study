@@ -57,12 +57,14 @@ class LoopsTest {
         }
 
         val iterator = zoo.iterator()
+        then(iterator).isNotEmpty
 
         while (iterator.hasNext()) {
             println("Watch out, it's a ${iterator.next().name}")
         }
 
         then(zoo.animals)
+                .hasSize(2)
                 .extracting("name")
                 .contains("zebra", "lion")
     }
