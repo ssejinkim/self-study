@@ -292,16 +292,16 @@ class CollectionFunctionsTest {
     @DisplayName("zip")
     fun `zip function merges two given collections into a new collection`() {
 
-        val A = listOf("a", "b", "c")
-        val B = listOf(1, 2, 3, 4)
+        val a = listOf("a", "b", "c")
+        val b = listOf(1, 2, 3, 4)
 
         // By default, the result collection contains Pairs of source collection elements with the same index
-        val resultPairs = A zip B
+        val resultPairs = a zip b
 
         then(resultPairs).contains(Pair("a", 1), Pair("b", 2), Pair("c", 3))
 
         // you can define own structure of the result collection element
-        val resultReduce = A.zip(B) { a, b -> "$a$b" }
+        val resultReduce = a.zip(b) { a, b -> "$a$b" }
         then(resultReduce).contains("a1", "b2", "c3")
 
     }
