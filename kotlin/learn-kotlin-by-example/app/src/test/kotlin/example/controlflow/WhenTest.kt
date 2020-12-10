@@ -36,6 +36,7 @@ class WhenTest {
 
         fun cases(obj: Any): Any = when (obj) {
             1 -> "One"
+            in 2..3-> "from 2 to 3"
             "Hello" -> "Greeting"
             is Long -> "Long"
             !is String -> "Not a string"
@@ -45,6 +46,7 @@ class WhenTest {
         class MyClass
 
         then(cases(1)).isEqualTo("One")
+        then(cases(2)).isEqualTo("from 2 to 3")
         then(cases("Hello")).isEqualTo("Greeting")
         then(cases(0L)).isEqualTo("Long")
         then(cases(MyClass())).isEqualTo("Not a string")
