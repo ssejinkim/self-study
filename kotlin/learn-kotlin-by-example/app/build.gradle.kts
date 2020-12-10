@@ -29,13 +29,17 @@ dependencies {
     // This dependency is used by the application.
     implementation("com.google.guava:guava:29.0-jre")
 
-    // Use the Kotlin test library.
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
-
-    // Use the Kotlin JUnit integration.
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+//    // Use the Kotlin test library.
+//    testImplementation("org.jetbrains.kotlin:kotlin-test")
+//
+//    // Use the Kotlin JUnit integration.
+//    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 
     testImplementation("org.assertj:assertj-core:3.6.1")
+
+    testImplementation(platform("org.junit:junit-bom:5.7.0"))
+
+    testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
 application {
@@ -46,5 +50,12 @@ application {
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
     kotlinOptions {
         jvmTarget = "11"
+    }
+}
+
+tasks.test {
+    useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
     }
 }
