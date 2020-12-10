@@ -1,12 +1,12 @@
 package example.introduction
 
-import org.assertj.core.api.BDDAssertions.assertThatThrownBy
-import org.assertj.core.api.BDDAssertions.then
+import org.assertj.core.api.BDDAssertions.*
 import org.junit.jupiter.api.Test
 
 class NullSafetyTest {
 
     @Test
+    @SuppressWarnings
     fun `Null Safety`() {
         var neverNull: String = "This can't be null"
 
@@ -30,7 +30,7 @@ class NullSafetyTest {
         // https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/plus.html
         then(nullable.plus(" test")).isEqualTo("null test")
 
-        assertThatThrownBy {
+        thenThrownBy {
             nullable!!.length
         }.isExactlyInstanceOf(KotlinNullPointerException::class.java)
 

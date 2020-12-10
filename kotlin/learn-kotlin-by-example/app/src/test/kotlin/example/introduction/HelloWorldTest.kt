@@ -3,8 +3,8 @@
  */
 package example.introduction
 
-import kotlin.test.Test
-import kotlin.test.assertNotNull
+import org.junit.jupiter.api.Assertions.assertNotNull
+import org.junit.jupiter.api.Test
 
 class App {
     val greeting: String
