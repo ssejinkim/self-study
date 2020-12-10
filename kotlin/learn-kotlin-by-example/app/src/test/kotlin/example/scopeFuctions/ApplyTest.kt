@@ -13,6 +13,7 @@ class ApplyTest {
 
         val jake = Person()
 
+        //This function is handy for initializing objects
         jake.apply {
             name = "Jake"
             age = 30
