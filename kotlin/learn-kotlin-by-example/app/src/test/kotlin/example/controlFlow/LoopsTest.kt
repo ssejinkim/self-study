@@ -1,4 +1,4 @@
-package example.controlflow
+package example.controlFlow
 
 import org.assertj.core.api.BDDAssertions.then
 import org.junit.jupiter.api.Test

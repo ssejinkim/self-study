@@ -1,4 +1,4 @@
-package example.controlflow
+package example.controlFlow
 
 import org.assertj.core.api.BDDAssertions.then
 import org.junit.jupiter.api.Test
@@ -70,7 +70,7 @@ class RangesTest {
         }
 
         then(result).isTrue()
-        
+
         if(x !in 6..10) {
            result = false
         }
