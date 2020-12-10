@@ -42,3 +42,9 @@ application {
     // Define the main class for the application.
     mainClass.set("example.AppKt")
 }
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
