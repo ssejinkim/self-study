@@ -3,7 +3,7 @@ package example.specialClasses
 import org.assertj.core.api.BDDAssertions.then
 import org.junit.jupiter.api.Test
 
-class EnumClasses {
+class EnumClassesTest {
 
     //Modifier 'enum' is not applicable to 'local class'
     enum class State {

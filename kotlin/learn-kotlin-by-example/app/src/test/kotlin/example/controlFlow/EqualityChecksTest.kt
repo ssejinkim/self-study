@@ -3,7 +3,7 @@ package example.controlFlow
 import org.assertj.core.api.BDDAssertions.then
 import org.junit.jupiter.api.Test
 
-class EqualityChecks {
+class EqualityChecksTest {
 
     @Test
     fun `Equality Checks`() {

@@ -3,14 +3,15 @@ package example.introduction
 import org.assertj.core.api.BDDAssertions.then
 import org.junit.jupiter.api.Test
 
-class Customer
-
-class Contact(val id: Int, var email: String)
-
 class Classes {
+
+    class Customer
+
+    class Contact(val id: Int, var email: String)
 
     @Test
     fun `Class Declaration`() {
+
         val customer = Customer()
 
         then(customer).isNotNull();
