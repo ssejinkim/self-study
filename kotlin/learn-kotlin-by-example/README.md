@@ -2,7 +2,8 @@
 - https://play.kotlinlang.org/byExample/overview
 
 ## Environment
-- Java 11
+- Kotlin
+- JDK 11
 - JUnit 5
 - AssertJ
 - Gradle
