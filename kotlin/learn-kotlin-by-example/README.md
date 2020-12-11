@@ -12,7 +12,7 @@
 ## Test
 `./gradlew test`
 
-## TOC
+## Table of Content
 ### Introduction
 - [x] Hello World
 - [x] Functions
