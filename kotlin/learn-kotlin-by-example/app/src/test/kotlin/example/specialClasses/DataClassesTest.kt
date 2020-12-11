@@ -5,6 +5,10 @@ import org.junit.jupiter.api.Test
 
 class DataClassesTest {
 
+    /*
+    Data Classes
+    https://kotlinlang.org/docs/reference/data-classes.html
+     */
     @Test
     fun `Data Classes`() {
         data class User(val name: String, val id: Int)

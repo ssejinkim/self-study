@@ -6,6 +6,10 @@ import org.junit.jupiter.api.Test
 
 class StringTemplatesTest {
 
+    /*
+    String templates
+    https://kotlinlang.org/docs/reference/basic-types.html#string-templates
+     */
     @Test
     @DisplayName("String Templates")
     fun `String templates allow you to include variable references and expressions into strings`() {

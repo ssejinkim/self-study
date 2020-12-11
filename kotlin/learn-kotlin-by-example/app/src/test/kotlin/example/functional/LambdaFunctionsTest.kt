@@ -5,6 +5,10 @@ import org.junit.jupiter.api.Test
 
 class LambdaFunctionsTest {
 
+    /*
+    Lambda Expressions and Anonymous Functions
+    https://kotlinlang.org/docs/reference/lambdas.html#lambda-expressions-and-anonymous-functions
+     */
     @Test
     fun `Lambda Functions`() {
         val upperCase1: (String) -> String = { str: String -> str.toUpperCase() }

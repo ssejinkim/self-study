@@ -10,6 +10,10 @@ class EnumClassesTest {
         IDLE, RUNNING, FINISHED
     }
 
+    /*
+    Enum Classes
+    https://kotlinlang.org/docs/reference/enum-classes.html
+     */
     @Test
     fun `Enum Classes`() {
         fun cases(state: State) = when (state) {

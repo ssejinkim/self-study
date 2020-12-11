@@ -6,6 +6,10 @@ import org.junit.jupiter.api.Test
 
 class DestructuringDeclaration {
 
+    /*
+    Destructuring Declarations
+    https://kotlinlang.org/docs/reference/multi-declarations.html#destructuring-declarations
+     */
     @Test
     @DisplayName("Destructuring Declaration")
     fun `Destructuring declaration syntax can be very handy, especially when you need an instance only for accessing its members`() {

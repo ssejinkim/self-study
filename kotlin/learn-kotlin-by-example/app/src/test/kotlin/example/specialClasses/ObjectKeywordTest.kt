@@ -5,6 +5,7 @@ import org.assertj.core.api.BDDAssertions.then
 import org.junit.jupiter.api.Test
 import java.util.*
 
+
 class ObjectKeywordTest {
 
     @Test
@@ -25,8 +26,13 @@ class ObjectKeywordTest {
 
     }
 
+    /*
+    Object Expressions and Declarations
+    https://kotlinlang.org/docs/reference/object-declarations.html
+     */
     @Test
     fun `object Expression`() {
+
         fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Int {
 
             // a simple object/properties structure
@@ -41,23 +47,23 @@ class ObjectKeywordTest {
         }
 
         then(rentPrice(10, 2, 1))
-                .isEqualTo(500)
+            .isEqualTo(500)
     }
 
 
-    //Named object 'DoAuth' is a singleton and cannot be local. Try to use anonymous object instead
+    //Named object 'DoAuth' is a singleton and cannot be local.
     object DoAuth {
         fun takeParams(username: String, password: String): Boolean =
-                username == "foo" && password == "qwerty"
+            username == "foo" && password == "qwerty"
     }
 
     @Test
     fun `object Declaration`() {
 
         then(DoAuth.takeParams("foo", "qwerty"))
-                .isTrue()
+            .isTrue()
         then(DoAuth.takeParams("bar", "qwerty"))
-                .isFalse()
+            .isFalse()
 
     }
 
@@ -68,7 +74,7 @@ class ObjectKeywordTest {
             fun getBongs(nTimes: Int): String {
                 var result = ""
                 for (i in 1..nTimes) {
-                  result += "Bong "
+                    result += "Bong "
                 }
                 return result
             }

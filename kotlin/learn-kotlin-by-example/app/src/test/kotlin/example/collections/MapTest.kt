@@ -5,7 +5,13 @@ import org.junit.jupiter.api.Test
 import java.util.Map.entry
 
 class MapTest {
+    /*
+    Kotlin Collections Overview
+    https://kotlinlang.org/docs/reference/collections-overview.html#kotlin-collections-overview
 
+    Map
+    https://kotlinlang.org/docs/reference/collections-overview.html#map
+    */
     @Test
     fun `A map is a collection of key-value pairs, where each key is unique and is used to retrieve the corresponding value`() {
         val POINTS_X_PASS = 15

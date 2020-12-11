@@ -7,6 +7,10 @@ import org.junit.jupiter.api.Test
 
 class DelegationPatternTest {
 
+    /*
+    Delegation
+    https://kotlinlang.org/docs/reference/delegation.html#delegation
+     */
     @Test
     @DisplayName("Delegation Pattern")
     fun `Kotlin supports easy implementation of the delegation pattern on the native level without any boilerplate code`() {

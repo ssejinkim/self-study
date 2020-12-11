@@ -23,8 +23,11 @@ class Example {
     override fun toString() = "Example Class"
 }
 
-
-class DelegationPropertiesTest {
+/*
+Delegated Properties
+https://kotlinlang.org/docs/reference/delegated-properties.html#delegated-properties
+ */
+class DelegatedPropertiesTest {
 
     @Test
     @DisplayName("Delegation Properties")

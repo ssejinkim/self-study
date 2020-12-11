@@ -6,25 +6,30 @@ import org.junit.jupiter.api.Test
 
 class FunctionsTest {
 
+    var argument = ""
+
+    private fun printMessage(message: String): Unit {
+        argument = message;
+        println(message)
+    }
+
+    private fun printMessageWithPrefix(message: String, prefix: String = "Info") {
+        argument = "[$prefix] $message"
+        println("[$prefix] $message")
+    }
+
+    private fun sum(x: Int, y: Int): Int {
+        return x + y;
+    }
+
+    private fun multiply(x: Int, y: Int) = x * y
+
+    /*
+    Default arguments
+    https://kotlinlang.org/docs/reference/functions.html#default-arguments
+    */
     @Test
-    fun `Default Parameter Values and Named Arguments`() {
-        var argument = ""
-
-        fun printMessage(message: String): Unit {
-            argument = message;
-            println(message)
-        }
-
-        fun printMessageWithPrefix(message: String, prefix: String = "Info") {
-            argument = "[$prefix] $message"
-            println("[$prefix] $message")
-        }
-
-        fun sum(x: Int, y: Int): Int {
-            return x + y;
-        }
-
-        fun multiply(x: Int, y: Int) = x * y
+    fun `Default Parameter Values`() {
 
         printMessage("Hello")
         then(argument).isEqualTo("Hello")
@@ -34,28 +39,43 @@ class FunctionsTest {
 
         printMessageWithPrefix("Hello")
         then(argument)
-                .`as`("optional parameter with default value")
-                .isEqualTo("[Info] Hello")
+            .`as`("optional parameter with default value")
+            .isEqualTo("[Info] Hello")
+    }
+
+    /*
+    Named arguments
+    https://kotlinlang.org/docs/reference/functions.html#named-arguments
+    */
+    @Test
+    fun `Named Arguments`() {
 
         printMessageWithPrefix(prefix = "Log", message = "Hello")
         then(argument)
-                .`as`("using name arguments")
-                .isEqualTo("[Log] Hello")
+            .`as`("using name arguments")
+            .isEqualTo("[Log] Hello")
 
         then(sum(1, 2)).isEqualTo(3)
         then(multiply(2, 4)).isEqualTo(8)
     }
 
+    /*
+    Infix notation
+    https://kotlinlang.org/docs/reference/functions.html#infix-notation
+    */
     @Test
     fun `Infix Functions`() {
 
-        //local function
+        /*
+        local function
+        https://kotlinlang.org/docs/reference/functions.html#local-functions
+        */
         infix fun Int.times(str: String) = str.repeat(this)
 
         println(2 times "Bye ")
         then(2 times "Bye ")
-                .`as`("Member functions and extensions with a single parameter can be turned into infix functions.")
-                .isEqualTo("Bye Bye ")
+            .`as`("Member functions and extensions with a single parameter can be turned into infix functions.")
+            .isEqualTo("Bye Bye ")
         then(2.times("Bye ")).isEqualTo("Bye Bye ")
 
         val pair = "Ferrari" to "Katrina"
@@ -89,17 +109,26 @@ class FunctionsTest {
 
     }
 
+    /*
+    operator overloading
+    https://kotlinlang.org/docs/reference/operator-overloading.html
+     */
     @Test
     fun `Operator Functions`() {
         operator fun Int.times(str: String) = str.repeat(this)
         println(2 * "Bye ")
         then(2 * "Bye ")
-                .`as`("operator")
-                .isEqualTo("Bye Bye ")
+            .`as`("operator")
+            .isEqualTo("Bye Bye ")
 
         //The get() operator enables bracket-access syntax.
         operator fun String.get(range: IntRange) = substring(range)
         val str = "Always forgive your enemies; nothing annoys them so much."
+
+        /*
+        Indexed access operator
+        https://kotlinlang.org/docs/reference/operator-overloading.html#indexed
+         */
         println(str[0..13])
         then(str[0..13]).isEqualTo("Always forgive")
     }
@@ -108,7 +137,10 @@ class FunctionsTest {
     fun `Functions with vararg Parameters`() {
         var arguments = mutableListOf<String>()
 
-        //vararg
+        /*
+        Varargs
+        https://kotlinlang.org/docs/reference/functions.html#variable-number-of-arguments-varargs
+         */
         fun printAll(vararg messages: String) {
             arguments.clear()
             for (m in messages) {
@@ -133,12 +165,12 @@ class FunctionsTest {
         val prefix = "Greeting: "
 
         printAllWithPrefix(
-                "Hello", "Hallo", "Salut", "Hola", "안녕",
-                prefix = prefix
+            "Hello", "Hallo", "Salut", "Hola", "안녕",
+            prefix = prefix
         )
 
         then(arguments)
-                .contains("${prefix}Hello", "${prefix}Hallo", "${prefix}Salut", "${prefix}Hola", "${prefix}안녕")
+            .contains("${prefix}Hello", "${prefix}Hallo", "${prefix}Salut", "${prefix}Hola", "${prefix}안녕")
 
         //out?
         //spread operator *
@@ -148,6 +180,6 @@ class FunctionsTest {
         }
 
         then(log("Hello", "Hallo", "Salut", "Hola", "안녕"))
-                .contains("Hello", "Hallo", "Salut", "Hola", "안녕")
+            .contains("Hello", "Hallo", "Salut", "Hola", "안녕")
     }
 }

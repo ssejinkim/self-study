@@ -5,6 +5,10 @@ import org.junit.jupiter.api.Test
 
 class HigherOrderFunctionsTest {
 
+    /*
+    Higher-Order Functions and Lambdas
+    https://kotlinlang.org/docs/reference/lambdas.html#higher-order-functions-and-lambdas
+    */
     @Test
     fun `Taking Functions as Parameters`() {
         fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int = operation(x, y)
@@ -24,13 +28,12 @@ class HigherOrderFunctionsTest {
     }
 
 
-
     @Test
     fun `Returning Function`() {
 
         fun square(x: Int) = x * x
 
-        fun operation() : (Int) -> Int {
+        fun operation(): (Int) -> Int {
             return ::square
         }
 

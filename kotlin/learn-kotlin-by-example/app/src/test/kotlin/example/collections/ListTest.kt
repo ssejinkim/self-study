@@ -5,6 +5,13 @@ import org.junit.jupiter.api.Test
 
 class ListTest {
 
+    /*
+    Kotlin Collections Overview
+    https://kotlinlang.org/docs/reference/collections-overview.html#kotlin-collections-overview
+
+    List
+    https://kotlinlang.org/docs/reference/collections-overview.html#list
+     */
     @Test
     fun `A list is an ordered collection of items`() {
         val systemUsers: MutableList<Int> = mutableListOf(1, 2, 3)

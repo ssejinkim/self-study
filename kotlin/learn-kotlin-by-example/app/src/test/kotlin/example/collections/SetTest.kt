@@ -5,6 +5,13 @@ import org.junit.jupiter.api.Test
 
 class SetTest {
 
+    /*
+    Kotlin Collections Overview
+    https://kotlinlang.org/docs/reference/collections-overview.html#kotlin-collections-overview
+
+    Set
+    https://kotlinlang.org/docs/reference/collections-overview.html#set
+    */
     @Test
     fun `A set is an unordered collection that does not support duplicates`() {
         val openIssues = mutableSetOf<String>("uniqueDescr1", "uniqueDescr2", "uniqueDescr3")

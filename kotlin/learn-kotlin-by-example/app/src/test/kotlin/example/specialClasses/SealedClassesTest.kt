@@ -7,6 +7,10 @@ import org.junit.jupiter.api.Test
 
 class SealedClassesTest {
 
+    /*
+    Sealed Classes
+    https://kotlinlang.org/docs/reference/sealed-classes.html
+     */
     @Test
     fun `Sealed Classes`() {
         then(greetingMammal(Human("Alex", "programmer")))

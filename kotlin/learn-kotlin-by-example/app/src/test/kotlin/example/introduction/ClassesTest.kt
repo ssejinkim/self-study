@@ -9,6 +9,10 @@ class Classes {
 
     class Contact(val id: Int, var email: String)
 
+    /*
+    Classes
+    https://kotlinlang.org/docs/reference/classes.html#classes
+     */
     @Test
     fun `Class Declaration`() {
 

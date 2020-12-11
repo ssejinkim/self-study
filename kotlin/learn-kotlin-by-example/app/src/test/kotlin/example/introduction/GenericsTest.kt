@@ -22,10 +22,17 @@ class GenericsTest {
 
     }
 
-    //generify function
-    fun <E> mutableStackOf(vararg elements: E) = MutableStack(*elements)
+    /*
+    Generic functions
+    https://kotlinlang.org/docs/reference/generics.html#generic-functions
+     */
+    private fun <E> mutableStackOf(vararg elements: E) = MutableStack(*elements)
 
 
+    /*
+    Generics
+    https://kotlinlang.org/docs/reference/generics.html
+     */
     @Test
     fun `Generic Classes`() {
         val stack = mutableStackOf("A", "B", "C")

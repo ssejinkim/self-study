@@ -16,6 +16,10 @@ class ExtensionFunctionsAndPropertiesTest {
 //            get() = items.map { it.name }.joinToString()
         get() = items.joinToString { it.name } //merge call chain
 
+    /*
+    Extensions
+    https://kotlinlang.org/docs/reference/extensions.html#extensions
+     */
     @Test
     fun `Extension Functions and Properties`() {
 
