@@ -1,4 +1,4 @@
-# Learn Kotlin by Example with TDD
+# Learn Kotlin by Example with Junit5 Test
 - https://play.kotlinlang.org/byExample/overview
 
 ## Environment
