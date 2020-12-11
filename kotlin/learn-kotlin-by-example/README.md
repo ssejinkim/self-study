@@ -2,9 +2,11 @@
 - https://play.kotlinlang.org/byExample/overview
 
 ## Environment
-- java 11
-- gradle
-- intelliJ
+- Java 11
+- JUnit 5
+- AssertJ
+- Gradle
+- IntelliJ
 
 ## Test
 `./gradlew test`
