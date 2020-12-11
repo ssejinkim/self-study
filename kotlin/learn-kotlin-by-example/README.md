@@ -12,7 +12,8 @@
 ## Test
 `./gradlew test`
 
-## Introduction
+## TOC
+### Introduction
 - [x] Hello World
 - [x] Functions
 - [x] Variables
@@ -21,25 +22,25 @@
 - [x] Generics
 - [x] Inheritance
 
-## Control Flow
+### Control Flow
 - [x] When
 - [x] Loops
 - [x] Ranges
 - [x] Equality Checks
 - [x] Conditional Expression
 
-## Special Classes
+### Special Classes
 - [x] Data Classes
 - [x] Enum Classes
 - [x] Sealed Classes
 - [x] Object Keyword
 
-## Functional
+### Functional
 - [x] Higher-Order Functions
 - [x] Lambda Functions
 - [x] Extension Functions and Properties
 
-## Collections
+### Collections
 - [x] List
 - [x] Set
 - [x] Map
@@ -58,24 +59,24 @@
 - [x] zip
 - [x] getOrElse
 
-## Scope Functions
+### Scope Functions
 - [x] let
 - [x] run
 - [x] with
 - [x] apply
 - [x] also
 
-## Delegation
+### Delegation
 - [x] Delegation Pattern
 - [x] Delegated Properties
 
-## Productivity Boosters
+### Productivity Boosters
 - [x] Named Arguments
 - [x] String Templates
 - [x] Destructuring Declarations
 - [x] Smart Casts
 
-## Kotlin/JS (N/A)
+### Kotlin/JS (N/A)
 - dynamic
 - JS function
 - External declarations
