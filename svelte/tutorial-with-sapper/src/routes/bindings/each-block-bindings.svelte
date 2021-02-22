@@ -1,5 +1,4 @@
 <script>
-import { bubble } from "svelte/internal";
 
     let todos =[
         { done: false, text: 'finish Svelte tutorial' },

@@ -10,8 +10,17 @@ polka() // You can also use Express
 	.use(
 		compression({ threshold: 0 }),
 		sirv('static', { dev }),
-		sapper.middleware()
+		sapper.middleware(),
+		(req, res, next) => {
+			console.log('req' ,req)
+			next();
+		}
+
 	)
+	.get('/users/:id', (req, res) => {
+		console.log(`~> Hello, ${req.hello}`);
+		res.end(`User: ${req.params.id}`);
+	  })
 	.listen(PORT, err => {
 		if (err) console.log('error', err);
 	});
