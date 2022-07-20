@@ -2,6 +2,7 @@ import HomeView from '../views/HomeView.vue'
 import DeclarativeRenderingView from '@/views/DeclarativeRendering.vue'
 import AttributeBindingsView from '@/views/AttributeBIndings.vue'
 import EventListenersView from '@/views/EventListeners.vue'
+import FormBindingsView from '@/views/FormBindings.vue'
 
 export const routes =  [
     {
@@ -31,5 +32,10 @@ export const routes =  [
       path: '/EventListeners',
       name: 'Event Listeners',
       component: EventListenersView 
+    },
+    {
+      path: '/FromBindings',
+      name: 'Form Bindings',
+      component: FormBindingsView 
     },
   ]
