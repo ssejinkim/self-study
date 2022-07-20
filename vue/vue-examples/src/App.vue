@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { routes } from './router/routes'
 </script>
 
 <template>
@@ -11,10 +12,9 @@ import HelloWorld from './components/HelloWorld.vue'
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/DeclarativeRendering">Declarative Rendering</RouterLink>
-        <RouterLink to="/AttributeBindings">Attribute Bindings</RouterLink>
+        <RouterLink v-for="route in routes" :key="route.name" :to="route.path">
+          {{ route.name }}
+        </RouterLink>
       </nav>
     </div>
   </header>
