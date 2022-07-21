@@ -10,6 +10,7 @@ import LifecycleAndTemplateRefsView from '@/views/LifecycleAndTemplateRefs.vue'
 import WatchersView from '@/views/Watchers.vue'
 import ComponentsView from '@/views/Components.vue'
 import PropsView from '@/views/Props.vue'
+import EmitsView from '@/views/Emits.vue'
 
 export const routes = [
   {
@@ -79,5 +80,10 @@ export const routes = [
     path: '/Props',
     name: 'Props',
     component: PropsView 
+  },
+  {
+    path: '/Emits',
+    name: 'Emits',
+    component: EmitsView 
   },
 ]
