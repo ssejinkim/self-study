@@ -8,8 +8,10 @@ const text2 = ref("")
 </script>
 
 <template>
-    <input :value="text" @input="onInput" placeholder="Type here">
-    <p>{{ text }}</p>
-    <input v-model="text2">
-    <p>{{ text2 }}</p>
+    <div>
+        <input :value="text" @input="onInput" placeholder="Type here">
+        <p>{{ text }}</p>
+        <input v-model="text2">
+        <p>{{ text2 }}</p>
+    </div>
 </template>
