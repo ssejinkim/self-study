@@ -5,6 +5,7 @@ import EventListenersView from '@/views/EventListeners.vue'
 import FormBindingsView from '@/views/FormBindings.vue'
 import ConditionalRenderingView from '@/views/ConditionalRendering.vue'
 import ListRenderingView from '@/views/ListRendering.vue'
+import ComputedPropertyView from '@/views/ComputedProperty.vue'
 
 export const routes = [
   {
@@ -49,5 +50,10 @@ export const routes = [
     path: '/ListRendering',
     name: 'List Rendering',
     component: ListRenderingView 
+  },
+  {
+    path: '/ComputedProperty',
+    name: 'Computed Property',
+    component: ComputedPropertyView 
   },
 ]
