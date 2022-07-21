@@ -4,6 +4,7 @@ import AttributeBindingsView from '@/views/AttributeBIndings.vue'
 import EventListenersView from '@/views/EventListeners.vue'
 import FormBindingsView from '@/views/FormBindings.vue'
 import ConditionalRenderingView from '@/views/ConditionalRendering.vue'
+import ListRenderingView from '@/views/ListRendering.vue'
 
 export const routes = [
   {
@@ -43,5 +44,10 @@ export const routes = [
     path: '/ConditionalRendering',
     name: 'Conditional Rendering',
     component: ConditionalRenderingView 
+  },
+  {
+    path: '/ListRendering',
+    name: 'List Rendering',
+    component: ListRenderingView 
   },
 ]
