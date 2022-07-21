@@ -21,7 +21,6 @@ const filteredTodos: ComputedRef = computed(() => {
 })
 
 function addTodo() {
-    console.log('addTodo')
     todos.value.push({ id: id++, text: newTodo.value, done: false })
     newTodo.value = ''
 }
