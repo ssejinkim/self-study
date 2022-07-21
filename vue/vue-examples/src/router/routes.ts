@@ -8,6 +8,7 @@ import ListRenderingView from '@/views/ListRendering.vue'
 import ComputedPropertyView from '@/views/ComputedProperty.vue'
 import LifecycleAndTemplateRefsView from '@/views/LifecycleAndTemplateRefs.vue'
 import WatchersView from '@/views/Watchers.vue'
+import ComponentsView from '@/views/Components.vue'
 
 export const routes = [
   {
@@ -67,5 +68,10 @@ export const routes = [
     path: '/Watchers',
     name: 'Watchers',
     component: WatchersView 
+  },
+  {
+    path: '/Components',
+    name: 'Components',
+    component: ComponentsView 
   },
 ]
