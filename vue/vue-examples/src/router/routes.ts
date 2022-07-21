@@ -11,6 +11,7 @@ import WatchersView from '@/views/Watchers.vue'
 import ComponentsView from '@/views/Components.vue'
 import PropsView from '@/views/Props.vue'
 import EmitsView from '@/views/Emits.vue'
+import SlotsView from '@/views/Slots.vue'
 
 export const routes = [
   {
@@ -85,5 +86,10 @@ export const routes = [
     path: '/Emits',
     name: 'Emits',
     component: EmitsView 
+  },
+  {
+    path: '/Slots',
+    name: 'Slots',
+    component: SlotsView 
   },
 ]
