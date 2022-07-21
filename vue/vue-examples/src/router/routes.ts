@@ -7,6 +7,7 @@ import ConditionalRenderingView from '@/views/ConditionalRendering.vue'
 import ListRenderingView from '@/views/ListRendering.vue'
 import ComputedPropertyView from '@/views/ComputedProperty.vue'
 import LifecycleAndTemplateRefsView from '@/views/LifecycleAndTemplateRefs.vue'
+import WatchersView from '@/views/Watchers.vue'
 
 export const routes = [
   {
@@ -61,5 +62,10 @@ export const routes = [
     path: '/LifecycleAndTemplateRefs',
     name: 'Lifecycle And Template Refs',
     component: LifecycleAndTemplateRefsView
+  },
+  {
+    path: '/Watchers',
+    name: 'Watchers',
+    component: WatchersView 
   },
 ]
