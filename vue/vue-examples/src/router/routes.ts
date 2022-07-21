@@ -9,6 +9,7 @@ import ComputedPropertyView from '@/views/ComputedProperty.vue'
 import LifecycleAndTemplateRefsView from '@/views/LifecycleAndTemplateRefs.vue'
 import WatchersView from '@/views/Watchers.vue'
 import ComponentsView from '@/views/Components.vue'
+import PropsView from '@/views/Props.vue'
 
 export const routes = [
   {
@@ -73,5 +74,10 @@ export const routes = [
     path: '/Components',
     name: 'Components',
     component: ComponentsView 
+  },
+  {
+    path: '/Props',
+    name: 'Props',
+    component: PropsView 
   },
 ]
